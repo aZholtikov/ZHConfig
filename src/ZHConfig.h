@@ -8,7 +8,7 @@ typedef enum : uint8_t
     ALARM = 1,
     DRY = 0
 } status_type_t;
-
+// ************************************************************************************************ //
 typedef struct
 {
     int16_t sensor_id{0};
