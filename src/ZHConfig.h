@@ -128,6 +128,18 @@ typedef struct
     char message[198]{0};
 } esp_now_payload_data_t;
 // ************************************************************************************************ //
+typedef struct
+{
+    char unitName[150]{0};
+    uint8_t unitNumber{1};
+    esp_now_led_type_t ledType{ENLT_NONE};
+    ha_component_type_t componentType{HACT_NONE};
+    ha_binary_sensor_device_class_t binarySensorDeviceClass{HABSDC_NONE};
+    ha_cover_device_class_t coverDeviceClass{HACDC_NONE};
+    ha_sensor_device_class_t sensorDeviceClass{HASDC_NONE};
+    ha_switch_device_class_t switchDeviceClass{HASWDC_NONE};
+} esp_now_config_data_t;
+// ************************************************************************************************ //
 typedef enum : uint8_t
 {
     ENLT_NONE,
@@ -137,43 +149,6 @@ typedef enum : uint8_t
     ENLT_RGBW,
     ENLT_RGBWW
 } esp_now_led_type_t;
-// ************************************************************************************************ //
-typedef enum : uint8_t
-{
-    ENSWT_NONE,
-    ENSWT_CHANNEL_1,
-    ENSWT_CHANNEL_2,
-    ENSWT_CHANNEL_3,
-    ENSWT_CHANNEL_4
-} esp_now_switch_type_t;
-// ************************************************************************************************ //
-typedef enum : uint8_t
-{
-    ENST_NONE,
-    ENST_TEMPERATURE,
-    ENST_TEMPERATURE_BATTERY,
-    ENST_TEMPERATURE_HYMIDITY,
-    ENST_TEMPERATURE_HYMIDITY_BATTERY,
-    ENST_TEMPERATURE_AIR_PRESSURE,
-    ENST_TEMPERATURE_AIR_PRESSURE_BATTERY,
-    ENST_TEMPERATURE_HYMIDITY_AIR_PRESSURE,
-    ENST_TEMPERATURE_HYMIDITY_AIR_PRESSURE_BATTERY,
-    ENST_TEMPERATURE_HYMIDITY_AIR_PRESSURE_AIR_QUALITY,
-    ENST_TEMPERATURE_HYMIDITY_AIR_PRESSURE_AIR_QUALITY_BATTERY,
-    ENST_HYMIDITY,
-    ENST_AIR_PRESSURE,
-    ENST_AIR_QUALITY,
-    ENST_PIR,
-    ENST_PIR_BATTERY,
-    ENST_OPEN_CLOSE,
-    ENST_OPEN_CLOSE_BATTERY,
-    ENST_GAS,
-    ENST_GAS_BATTERY,
-    ENST_SMOKE,
-    ENST_SMOKE_BATTERY,
-    ENST_TOUCH,
-    ENST_TOUCH_BATTERY
-} esp_now_sensor_type_t;
 // ************************************************************************************************ //
 #define HA_COMPONENT_TYPE                               \
     DF(HACT_NONE, "")                                   \
