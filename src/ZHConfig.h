@@ -378,5 +378,6 @@ typedef struct
     ha_cover_device_class_t coverDeviceClass{HACDC_NONE};
     ha_sensor_device_class_t sensorDeviceClass{HASDC_NONE};
     ha_switch_device_class_t switchDeviceClass{HASWDC_NONE};
+    bool switchReverse{false};
 } esp_now_config_data_t;
 // ************************************************************************************************ //
