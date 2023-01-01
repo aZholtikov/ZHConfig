@@ -379,5 +379,6 @@ typedef struct
     ha_sensor_device_class_t sensorDeviceClass{HASDC_NONE};
     ha_switch_device_class_t switchDeviceClass{HASWDC_NONE};
     bool switchReverse{false};
+    char empty[40]{0}; // For esp_now_payload_data_t::message compatible.
 } esp_now_config_data_t;
 // ************************************************************************************************ //
