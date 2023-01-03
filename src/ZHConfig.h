@@ -368,17 +368,3 @@ String getValueName(ha_switch_device_class_t value)
     return "";
 }
 // ************************************************************************************************ //
-typedef struct
-{
-    char unitName[150]{0};
-    uint8_t unitNumber{1};
-    esp_now_led_type_t ledType{ENLT_NONE};
-    ha_component_type_t componentType{HACT_NONE};
-    ha_binary_sensor_device_class_t binarySensorDeviceClass{HABSDC_NONE};
-    ha_cover_device_class_t coverDeviceClass{HACDC_NONE};
-    ha_sensor_device_class_t sensorDeviceClass{HASDC_NONE};
-    ha_switch_device_class_t switchDeviceClass{HASWDC_NONE};
-    bool switchReverse{false};
-    char empty[40]{0}; // For esp_now_payload_data_t::message compatible.
-} esp_now_config_data_t;
-// ************************************************************************************************ //
