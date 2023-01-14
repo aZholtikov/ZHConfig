@@ -61,7 +61,8 @@ String getValueName(rf_sensor_type_t value)
     DF(ENDT_SENSOR, "espnow_sensor")               \
     DF(ENDT_RF_GATEWAY, "espnow_rf_gateway")       \
     DF(ENDT_CONTROL_PANEL, "espnow_control_panel") \
-    DF(ENDT_DIMMER, "espnow_dimmer")
+    DF(ENDT_DIMMER, "espnow_dimmer")               \
+    DF(ENDT_TERRARIUM, "espnow_terrarium")
 
 typedef enum : uint8_t
 {
