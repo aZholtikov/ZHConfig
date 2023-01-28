@@ -139,6 +139,14 @@ typedef enum : uint8_t
     ENLT_RGBWW
 } esp_now_led_type_t;
 // ************************************************************************************************ //
+typedef enum : uint8_t
+{
+    ENST_NONE,
+    ENST_D18B20,
+    ENST_DHT11,
+    ENST_DHT22
+} esp_now_sensor_type_t;
+// ************************************************************************************************ //
 #define HA_COMPONENT_TYPE                               \
     DF(HACT_NONE, "")                                   \
     DF(HACT_ALARM_CONTROL_PANEL, "alarm_control_panel") \
