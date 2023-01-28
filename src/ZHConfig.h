@@ -142,7 +142,7 @@ typedef enum : uint8_t
 typedef enum : uint8_t
 {
     ENST_NONE,
-    ENST_D18B20,
+    ENST_DS18B20,
     ENST_DHT11,
     ENST_DHT22
 } esp_now_sensor_type_t;
