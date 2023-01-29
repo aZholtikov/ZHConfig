@@ -139,13 +139,34 @@ typedef enum : uint8_t
     ENLT_RGBWW
 } esp_now_led_type_t;
 // ************************************************************************************************ //
+#define ESP_NOW_SENSOR_TYPE     \
+    DF(ENST_NONE, "")           \
+    DF(ENST_DS18B20, "ds18b20") \
+    DF(ENST_DHT11, "dht11")     \
+    DF(ENST_DHT22, "dht22")
+
 typedef enum : uint8_t
 {
-    ENST_NONE,
-    ENST_DS18B20,
-    ENST_DHT11,
-    ENST_DHT22
+#define DF(_value, _name) _value,
+    ESP_NOW_SENSOR_TYPE
+#undef DF
 } esp_now_sensor_type_t;
+
+String getValueName(esp_now_sensor_type_t value)
+{
+    switch (value)
+    {
+#define DF(_value, _name) \
+    case _value:          \
+        return _name;
+        ESP_NOW_SENSOR_TYPE
+#undef DF
+        break;
+    default:
+        break;
+    }
+    return "";
+}
 // ************************************************************************************************ //
 #define HA_COMPONENT_TYPE                               \
     DF(HACT_NONE, "")                                   \
