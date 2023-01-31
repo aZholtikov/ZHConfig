@@ -143,7 +143,8 @@ typedef enum : uint8_t
     DF(ENST_NONE, "")           \
     DF(ENST_DS18B20, "ds18b20") \
     DF(ENST_DHT11, "dht11")     \
-    DF(ENST_DHT22, "dht22")
+    DF(ENST_DHT22, "dht22")     \
+    DF(ENST_KY038, "ky-038")
 
 typedef enum : uint8_t
 {
