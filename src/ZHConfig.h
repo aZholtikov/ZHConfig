@@ -140,6 +140,21 @@ typedef enum : uint8_t
     ENLT_RGBWW
 } esp_now_led_type_t;
 // ************************************************************************************************ //
+typedef enum : uint8_t
+{
+  MCMT_NONE,
+  MCMT_DEVICE_NAME,
+  MCMT_DEVICE_UNIT,
+  MCMT_COMPONENT_TYPE,
+  MCMT_DEVICE_CLASS,
+  MCMT_VALUE_TEMPLATE,
+  MCMT_UNIT_OF_MEASUREMENT,
+  MCMT_EXPIRE_AFTER,
+  MCMT_OFF_DELAY,
+  MCMT_PAYLOAD_ON,
+  MCMT_PAYLOAD_OFF
+} mqtt_config_message_type_t;
+// ************************************************************************************************ //
 #define ESP_NOW_SENSOR_TYPE     \
     DF(ENST_NONE, "")           \
     DF(ENST_DS18B20, "ds18b20") \
