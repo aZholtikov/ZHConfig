@@ -152,7 +152,9 @@ typedef enum : uint8_t
   MCMT_EXPIRE_AFTER,
   MCMT_OFF_DELAY,
   MCMT_PAYLOAD_ON,
-  MCMT_PAYLOAD_OFF
+  MCMT_PAYLOAD_OFF,
+  MCMT_RF_SENSOR_TYPE,
+  MCMT_RF_SENSOR_ID
 } mqtt_config_message_type_t;
 // ************************************************************************************************ //
 #define ESP_NOW_SENSOR_TYPE     \
